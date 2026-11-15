@@ -1,0 +1,45 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #0b0b0e; color: #e6e6ea; font: 15px/1.5 system-ui, sans-serif; }
+body.center { display: grid; place-items: center; min-height: 100vh; }
+.layout { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+aside { border-right: 1px solid #1d1d24; padding: 16px; }
+aside h1 { font-size: 17px; margin: 0 0 14px; }
+.add { display: flex; gap: 6px; margin-bottom: 6px; }
+input, button { font: inherit; padding: 7px 10px; border-radius: 8px; border: 1px solid #26262f;
+  background: #101014; color: inherit; }
+input { flex: 1; min-width: 0; }
+button { cursor: pointer; background: #4c5fd5; border-color: #4c5fd5; color: #fff; }
+button.ghost { background: transparent; border-color: #26262f; color: #a8a8b4; }
+button.danger { background: transparent; border-color: #552b2b; color: #ef8b8b; }
+.acc { display: flex; justify-content: space-between; align-items: center; gap: 4px;
+  padding: 5px 6px; border-radius: 7px; }
+.acc:hover { background: #14141a; }
+.acc a { color: #b9b9c4; text-decoration: none; font-size: 14px; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap; }
+.acc a.sel { color: #fff; font-weight: 600; }
+.ctl { display: flex; gap: 2px; opacity: 0; }
+.acc:hover .ctl { opacity: 1; }
+.ctl button { padding: 1px 6px; font-size: 12px; }
+.badge { background: #4c5fd5; color: #fff; border-radius: 10px; padding: 0 6px; font-size: 11px; }
+.bar { display: flex; gap: 10px; align-items: center; padding: 14px 20px;
+  border-bottom: 1px solid #1d1d24; position: sticky; top: 0; background: #0b0b0e; }
+.bar a { color: #8a8a96; text-decoration: none; padding: 5px 10px; border-radius: 7px; }
+.bar a.sel { background: #17171e; color: #fff; }
+.bar form { margin-left: auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px; padding: 20px; }
+.vid { background: #121218; border-radius: 10px; overflow: hidden; border: 1px solid #1c1c23; }
+.vid.unseen { border-color: #4c5fd5; box-shadow: 0 0 0 1px #4c5fd5 inset; }
+.vid img, .noimg { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block;
+  background: #1a1a21; }
+.meta { padding: 9px; }
+.meta a { color: #e6e6ea; text-decoration: none; font-size: 13px; display: block;
+  max-height: 3.6em; overflow: hidden; }
+.meta small { color: #77777f; font-size: 11px; }
+.muted { color: #77777f; padding: 20px; }
+.bad { color: #ef8b8b; font-size: 11px; }
+.error { color: #ef8b8b; }
+.login { flex-direction: column; width: 280px; padding: 20px; background: #121218;
+  border-radius: 12px; display: flex; gap: 10px; }
+#msg { color: #8a8a96; font-size: 12px; min-height: 1.2em; margin: 0 0 10px; }
